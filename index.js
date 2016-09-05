@@ -21,7 +21,7 @@ var api = new ParseServer({
     emailVerifyTokenValidityDuration: 2 * 60 * 60,
     preventLoginWithUnverifiedEmail: false,
     publicServerURL: 'https://your-app-name.herokuapp.com/parse',
-    appName: 'badgitapp',
+    appName: 'letsbadgit',
     
     emailAdapter: {
         module: 'parse-server-simple-mailgun-adapter',
