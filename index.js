@@ -18,28 +18,23 @@ var api = new ParseServer({
   masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
   
   verifyUserEmails: true,
-    emailVerifyTokenValidityDuration: 2 * 60 * 60,
-    preventLoginWithUnverifiedEmail: false,
-      publicServerURL: 'https://badgit.herokuapp.com/parse',
-    appName: 'badgit',
-    
-    emailAdapter: {
-        module: 'parse-server-simple-mailgun-adapter',
-        options: {
-        // The address that your emails come from
-        fromAddress: 'postmaster@grayscaletechnologies.com',
-        // Your domain from mailgun.com
-        domain: 'grayscaletechnologies.com',
-        // Your API key from mailgun.com
-        apiKey: 'key-8cf7b4cde813b07f67d13ac7b148eb33',
+  // The public URL of your app.
+  // This will appear in the link that is used to verify email addresses and reset passwords.
+  // Set the mount path as it is in serverURL
+  publicServerURL: 'https://your-app-name.herokuapp.com/parse',
+  // Your apps name. This will appear in the subject and body of the emails that are sent.
+  appName: 'badgit',
+  // The email adapter
+  emailAdapter: {
+    module: 'parse-server-simple-mailgun-adapter',
+    options: {
+      // The address that your emails come from
+      fromAddress: 'postmaster@grayscaletechnologies.com',
+      // Your domain from mailgun.com
+      domain: 'grayscaletechnologies.com',
+      // Your API key from mailgun.com
+      apiKey: 'key-8cf7b4cde813b07f67d13ac7b148eb33',
     }
-  },
-    
-    customPages: {
- //   invalidLink: 'http://yourpage/link_invalid.html',
-    verifyEmailSuccess: 'http://blink-interactive.com/nutrics/zz/verify_email_success.html',
-    choosePassword: 'http://blink-interactive.com/nutrics/zz/choose_password.html',
-    passwordResetSuccess: 'http://blink-interactive.com/nutrics/zz/password_reset_success.html'
   },
 
   liveQuery: {
