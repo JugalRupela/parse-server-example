@@ -17,7 +17,7 @@ var api = new ParseServer({
   appId: process.env.APP_ID || 'myAppId',
   masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
   
- /* verifyUserEmails: true,
+  verifyUserEmails: true,
     emailVerifyTokenValidityDuration: 2 * 60 * 60,
     preventLoginWithUnverifiedEmail: false,
       publicServerURL: 'https://badgit.herokuapp.com/parse',
@@ -41,7 +41,7 @@ var api = new ParseServer({
     choosePassword: 'http://blink-interactive.com/nutrics/zz/choose_password.html',
     passwordResetSuccess: 'http://blink-interactive.com/nutrics/zz/password_reset_success.html'
   },
-*/
+
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
   }
