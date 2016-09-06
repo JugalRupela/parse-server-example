@@ -29,11 +29,11 @@ var api = new ParseServer({
     module: 'parse-server-simple-mailgun-adapter',
     options: {
       // The address that your emails come from
-      fromAddress: 'postmaster@grayscaletechnologies.com',
+      fromAddress: '',
       // Your domain from mailgun.com
-      domain: 'grayscaletechnologies.com',
+      domain: '',
       // Your API key from mailgun.com
-      apiKey: 'key-8cf7b4cde813b07f67d13ac7b148eb33',
+      apiKey: '',
     }
   },
 
